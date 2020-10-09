@@ -1,7 +1,7 @@
 name: Send a reminder to the office to open the windows
 on:
   schedule:
-    - cron: '*/45 * * * *'
+    - cron: '*/5 * * * *'
 jobs:
   ping_matrix:
    runs-on: ubuntu-latest

@@ -1,15 +1,15 @@
 name: Send a reminder to the office to open the windows
 on:
   schedule:
-    - cron: '00,45 09-17/3 * * 1-5'
-    - cron: '30 10-18/3 * * 1-5'
-    - cron: '15 11-19/3 * * 1-5'
+    - cron: '00,45 09-16/3 * * 1-5'
+    - cron: '30 10-17/3 * * 1-5'
+    - cron: '15 11-18/3 * * 1-5'
 jobs:
   ping_matrix:
    runs-on: ubuntu-latest
    steps:
      - name: send message
-       uses: s3krit/matrix-message-action@v0.0.1
+       uses: s3krit/matrix-message-action@v0.0.3
        with:
          room_id: ${{ secrets.MATRIX_ROOM_ID }}
          access_token: ${{ secrets.MATRIX_ACCESS_TOKEN }}

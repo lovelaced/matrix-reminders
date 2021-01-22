@@ -1,5 +1,8 @@
 name: Send a reminder to watch out for scams
 on:
+  push:
+    branches: 
+      - master
   schedule:
 #    - cron: '00,45 08-15/3 * * 1-5'
  #   - cron: '30 09-16/3 * * 1-5'

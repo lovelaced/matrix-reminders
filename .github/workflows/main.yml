@@ -1,9 +1,9 @@
-name: Send a reminder to the office to open the windows
-#on:
-#  schedule:
+name: Send a reminder to watch out for scams
+on:
+  schedule:
 #    - cron: '00,45 08-15/3 * * 1-5'
  #   - cron: '30 09-16/3 * * 1-5'
- #   - cron: '15 10-17/3 * * 1-5'
+    - cron: '0 */1 * * *'
 jobs:
   ping_matrix:
    runs-on: ubuntu-latest
@@ -13,6 +13,6 @@ jobs:
        with:
          room_id: ${{ secrets.MATRIX_ROOM_ID }}
          access_token: ${{ secrets.MATRIX_ACCESS_TOKEN }}
-         message: "Please open the windows, it's been 45 minutes."
-         formatted_message: "<strong>Please open the windows, it's been 45 minutes.</strong>"
+         message: "Keep an eye out for scams: employees and representatives of Parity and Web3 Foundation will never DM you first, and will never ask you for your mnemonic/seed phrase. Never share your mnemonic/seed phrase or password with anyone, and only enter your mnemonic/seed phrases into trusted websites. Be aware that scammers will often impersonate employees and/or replicate trusted websites. Learn more about how to protect yourself from scams at https://wiki.polkadot.network/docs/en/learn-scams"
+         formatted_message: "<strong>Keep an eye out for scams:</strong> employees and representatives of Parity and Web3 Foundation will never DM you first, and will never ask you for your mnemonic/seed phrase. Never share your mnemonic/seed phrase or password with anyone, and only enter your mnemonic/seed phrases into trusted websites. Be aware that scammers will often impersonate employees and/or replicate trusted websites. Learn more about how to protect yourself from scams at https://wiki.polkadot.network/docs/en/learn-scams"
          server: "matrix.parity.io"

@@ -1,7 +1,7 @@
 name: Send a reminder to watch out for scams
 on:
   schedule:
-    - cron: '0 */1 * * *'
+    - cron: '0 */15 * * *'
 jobs:
   ping_matrix:
    runs-on: ubuntu-latest
